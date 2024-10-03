@@ -36,11 +36,25 @@
     z-index: 9999; /* Ensure the loader is above other content */
 }
 
-#loader img {
-    width: 150px; /* Adjust size of your logo */
-    animation: bulge 1.5s infinite; /* Animation duration and iteration */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: #ffffff; /* Change as needed for your theme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the loader is above other content */
 }
 
+#loader img {
+    max-width: 90%; /* Allow the logo to resize */
+    max-height: 90%; /* Allow the logo to resize */
+    animation: bulge 1s infinite; /* Animation duration */
+}
+   
 @keyframes bulge {
     0%, 100% {
         transform: scale(1); /* Normal size */
