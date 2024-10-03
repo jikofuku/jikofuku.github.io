@@ -4,13 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jikø Fükü</title>
-<script>
-    if (window.location.hash) {
-        window.location.href = window.location.href.replace(/#!\/+/, '');
-    }
-</script>
+ <script>
+        // Function to handle routing
+        function navigateTo(url) {
+            // Use the History API to push a new state
+            history.pushState(null, '', url);
+            // Call your function to update the page content based on the URL
+            updateContent(url);
+        }
+
+        // Update content based on the URL
+        function updateContent(url) {
+            // Here you can load different content based on the URL
+            // For example:
+            if (url === '/about') {
+                document.getElementById('content').innerText = 'About Page Content';
+            } else if (url === '/contact') {
+                document.getElementById('content').innerText = 'Contact Page Content';
+            } else {
+                document.getElementById('content').innerText = 'Home Page Content';
+            }
+        }
+
+        // Handle back/forward navigation
+        window.onpopstate = function() {
+            updateContent(location.pathname);
+        };
+
+        // Initial content load based on the current URL
+        document.addEventListener('DOMContentLoaded', function() {
+            updateContent(location.pathname);
+        });
+    </script>
 </head>
 <body>
+<nav>
+        <a href="/" onclick="navigateTo('/')">Home</a>
+        <a href="/about" onclick="navigateTo('/about')">About</a>
+        <a href="/contact" onclick="navigateTo('/contact')">Contact</a>
+    </nav>
 <div id="myShop">
     <a href="https://jiko-fuku.myspreadshop.com">jiko-fuku</a>
 </div>
