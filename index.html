@@ -19,8 +19,44 @@
 	<link rel="icon" sizes="192x192" href="favicon_io/android-chrome-192x192.png">
 	<link rel="icon" sizes="512x512" href="favicon_io/android-chrome-512x512.png">
 
+<style>
+		#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff; /* Change as needed for your theme */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure the loader is above other content */
+}
+
+#loader img {
+    width: 150px; /* Adjust size of your logo */
+    animation: bulge 1.5s infinite; /* Animation duration and iteration */
+}
+
+@keyframes bulge {
+    0%, 100% {
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        transform: scale(1.1); /* Bulging effect */
+    }
+}
+	</style>
+
+
 </head>
 <body>
+
+<!-- Loading Screen -->
+	<div id="loader">
+    <img src="Assets/Red.png" alt="Loading..." />
+</div>
+
  <div id="myShop">
 
 </div>
@@ -33,6 +69,10 @@
         baseId: 'myShop',
         usePushState: true,
         updateMetadata: true,
+    };
+	
+	window.onload = function() {
+        document.getElementById("loader").style.display = "none"; // Hide loader after loading
     };
 </script>
 
