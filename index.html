@@ -6,21 +6,21 @@
     <title>Jikø Fükü</title>
 </head>
 <body>
-<div id="myShop">
-    <a href="https://jiko-fuku.myspreadshop.com">jiko-fuku</a>
+    <div id="shop">
+<img src="path/to/your/spinner.gif" alt="Loading..." />
 </div>
-
-<script>
-    var spread_shop_config = {
-        shopName: 'jiko-fuku',
-        locale: 'us_US',
-        prefix: 'https://jiko-fuku.myspreadshop.com',
-        baseId: 'myShop'
-    };
-</script>
-
-<script type="text/javascript"
-        src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js">
-</script>
+    <script>
+        // Configure your Spreadshop
+        var spread_shop_config = {
+            shopName: 'jiko-fuku',
+            prefix: 'https://jiko-fuku.myspreadshop.com', 
+            baseId: 'shop',
+            locale: 'us_US',
+            usePushState: true,
+            updateMetadata: true
+        };
+    </script>
+    
+    <script type="text/javascript" src="https://jiko-fuku.myspreadshop.com/js/shopclient.nocache.js"></script>
 </body>
 </html>
