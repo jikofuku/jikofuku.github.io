@@ -16,7 +16,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <style>
         /* Loader Style */
         #loader {
@@ -49,6 +48,25 @@
         /* Initially hide the footer */
         footer {
             display: none;
+        }
+
+        /* Ensure responsive layout for mobile */
+        @media (max-width: 768px) {
+            footer {
+                max-width: 100%;
+                padding: 10px;
+            }
+
+            body, html {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+            }
+        }
+
+        /* Prevent overflow causing white space */
+        body {
+            overflow-x: hidden;
         }
     </style>
 </head>
@@ -96,7 +114,6 @@
         <p style="margin: 0; font-size: 12px; color: #ffffff;">Phone: <span style="color: #ffffff;">+1 800 381 0815 (Mon - Fri: 8am - 7pm ET)</span></p>
     </div>
 </footer>
-
 
     <!-- Script to wait until the shop content is fully rendered -->
     <script>
