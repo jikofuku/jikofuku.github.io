@@ -7,9 +7,3 @@ var spread_shop_config = {
     usePushState: true,
     updateMetadata: true,
 };
-
-// Script to hide loader after content is rendered
-window.onload = function() {
-    const loader = document.getElementById('loader');
-    loader.style.display = 'none';  // Hide loader once the page is fully loaded
-};
