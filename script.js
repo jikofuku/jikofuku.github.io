@@ -9,7 +9,6 @@ var spread_shop_config = {
 };
 
 // Title Override
-<script>
   document.addEventListener("DOMContentLoaded", function() {
     document.title = "Jiko Fuku"; // Replace with your preferred title
   });
