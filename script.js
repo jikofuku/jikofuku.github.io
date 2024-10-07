@@ -5,15 +5,24 @@ var spread_shop_config = {
     prefix: 'https://jiko-fuku.myspreadshop.com',
     baseId: 'myShop',
     usePushState: true,
-    updateMetadata: false,  // Prevent Spreadshirt from changing the metadata
+    updateMetadata: false  // Prevent Spreadshirt from changing the metadata
 };
 
-// Listen for when DOM is fully loaded
+// Initialize Spreadshop after DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
+    // Initialize the Spreadshop client when the script is loaded
+    if (typeof SpreadshopClient !== 'undefined') {
+        SpreadshopClient.init(spread_shop_config);
+    } else {
+        console.error('Spreadshop script not loaded.');
+    }
+
     // Change the title after the DOM has fully loaded
-    document.title = "Jiko Fuku";  // Replace with your preferred title
+    document.title = "Jiko Fuku";
 
     // Hide the loader once the page is fully loaded
     const loader = document.getElementById('loader');
-    loader.style.display = 'none';  // Hide loader
+    if (loader) {
+        loader.style.display = 'none';
+    }
 });
