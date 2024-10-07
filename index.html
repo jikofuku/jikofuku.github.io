@@ -139,8 +139,13 @@
                 updateMetadata: false  // Ensure Spreadshirt doesn't override your metadata
             };
             window.onload = function() {
-                document.title = "Jiko Fuku";  // Set the custom title
-            }
+                // Ensures that the loader disappears after the shop has loaded
+                const loader = document.getElementById('loader');
+                loader.style.display = 'none';
+
+                // Re-set the title after Spreadshop has loaded
+                document.title = "Jiko Fuku";  // Your custom title
+            };
         </script>
 
         <script type="text/javascript" src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js"></script>
