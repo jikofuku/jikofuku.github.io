@@ -5,7 +5,7 @@ var spread_shop_config = {
     prefix: 'https://jiko-fuku.myspreadshop.com',
     baseId: 'myShop',
     usePushState: true,
-    updateMetadata: true,
+    updateMetadata: false,
 };
 
 // Title Override
