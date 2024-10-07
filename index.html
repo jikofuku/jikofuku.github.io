@@ -136,8 +136,11 @@
                 prefix: 'https://jiko-fuku.myspreadshop.com',
                 baseId: 'myShop',
                 usePushState: true,
-                updateMetadata: true,
+                updateMetadata: false  // Ensure Spreadshirt doesn't override your metadata
             };
+            window.onload = function() {
+                document.title = "Jiko Fuku";  // Set the custom title
+            }
         </script>
 
         <script type="text/javascript" src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js"></script>
