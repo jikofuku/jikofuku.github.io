@@ -5,10 +5,10 @@ var spread_shop_config = {
     prefix: 'https://jiko-fuku.myspreadshop.com',
     baseId: 'myShop',
     usePushState: true,
-    updateMetadata: false,
+    updateMetadata: false,  // Prevent Spreadshirt from changing the metadata
 };
 
-// Title Override
-  document.addEventListener("DOMContentLoaded", function() {
-    document.title = "Jiko Fuku"; // Replace with your preferred title
-  });
+// Title Override (ensure it runs after the Spreadshop loads)
+window.onload = function() {
+    document.title = "Jiko Fuku";  // Replace with your preferred title
+};
