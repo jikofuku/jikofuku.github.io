@@ -25,6 +25,8 @@
             font-family: Arial, sans-serif;
             height: 100%; /* Ensure the body takes up full height */
             background-color: #000000; /* Ensures no white space is visible */
+            width: 100%; /* Ensures the body and html take up full width */
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
 
         /* Loader Style */
@@ -58,16 +60,16 @@
         /* Main content to ensure footer doesn't load first */
         main {
             min-height: 100vh; /* Ensures main content takes full viewport height */
+            width: 100%;
         }
 
-/* Footer styling */
-footer {
+        /* Footer styling */
+        footer {
             background-color: #000000;
             color: #ffffff;
             padding: 10px;
             text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 100%; /* Ensure footer spans the entire width */
             display: flex;
             align-items: center;
             justify-content: space-between;
