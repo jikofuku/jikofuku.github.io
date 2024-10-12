@@ -1,4 +1,3 @@
-
 var spread_shop_config = {
     shopName: 'jiko-fuku',
     locale: 'us_US',
