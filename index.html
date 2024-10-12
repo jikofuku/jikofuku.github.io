@@ -128,7 +128,16 @@
         <div id="myShop">
             <!-- Shop Content Here -->
         </div>
-
+        <script>
+        window.onload = function() {
+            const loader = document.getElementById('loader');
+            loader.style.display = 'none';  // Hide loader once the page is fully loaded
+        
+            // Re-set the title after Spreadshop has loaded
+            document.title = "Jiko Fuku";  // Your custom title
+        };
+        </script>
+        
         <!-- Spreadshop Client Script -->
 
       <script defer type="text/javascript" src="config.min.js"></script>
