@@ -1,3 +1,11 @@
+window.onload = function() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';  // Hide loader once the page is fully loaded
+
+    // Re-set the title after Spreadshop has loaded
+    document.title = "Jiko Fuku";  // Your custom title
+};
+
 var spread_shop_config = {
     shopName: 'jiko-fuku',
     locale: 'us_US',
