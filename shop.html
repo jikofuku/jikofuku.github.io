@@ -2,16 +2,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="Assetss/Red.png" as="image">
-    <title>Jikø Fükü</title>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon_io/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon_io/android-chrome-512x512.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <link rel="icon" href="favicon_io/favicon.ico">
-    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <title></title>
     <meta name="theme-color" content="#ffffff">
     <meta charset="UTF-8">
 
@@ -26,34 +17,6 @@
             background-color: #000000; /* Ensures no white space is visible */
             width: 100%; /* Ensures the body and html take up full width */
             overflow-x: hidden; /* Prevents horizontal scrolling */
-        }
-
-        /* Loader Style */
-        #loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-
-        #loader img {
-            width: 150px;
-            animation: bulge 1s infinite;
-        }
-
-        @keyframes bulge {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
         }
 
         /* Main content to ensure footer doesn't load first */
@@ -119,29 +82,26 @@
 
 <body>
 
-    <!-- Loading Screen -->
-    <div id="loader">
-        <img src="Assetss/Red.png" alt="Loading..." />
-    </div>
-
     <main>
         <div id="myShop">
             <!-- Shop Content Here -->
         </div>
 
-        <!-- Spreadshop Client Script -->
-        <script type="text/javascript">
-            window.onload = function() {
-    const loader = document.getElementById('loader');
-    loader.style.display = 'none';  // Hide loader once the page is fully loaded
+                <!-- Spreadshop Client Script -->
+                <script type="text/javascript">
+                    var spread_shop_config = {
+                        shopName: 'jiko-fuku',
+                        locale: 'us_US',
+                        prefix: 'https://jiko-fuku.myspreadshop.com',
+                        baseId: 'myShop',
+                        usePushState: true,
+                        updateMetadata: false  // Ensure Spreadshirt doesn't override your metadata
+                    };
+                </script>
 
-    // Re-set the title after Spreadshop has loaded
-    document.title = "Jiko Fuku";  // Your custom title
-};
-        </script>
-
-        <script defer type="text/javascript" src="config.min.js"></script>
+<script defer type="text/javascript" src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js"></script>
     </main>
+    
 
     <!-- Footer -->
     <footer>
