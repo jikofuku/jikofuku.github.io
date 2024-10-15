@@ -5,7 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jiko Fuku Shop</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
-    <!-- Other CSS files can be linked here -->
+
+    <style>
+                /* Main content to ensure footer doesn't load first */
+                main {
+            min-height: 100vh; /* Ensures main content takes full viewport height */
+            width: 100%;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            width: 100%; /* Ensure footer spans the entire width */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        footer div {
+            display: flex;
+            flex-grow: 1;
+            justify-content: center;
+        }
+
+        footer p, footer a {
+            margin: 0;
+            font-size: 12px;
+            padding: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-right {
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            padding-left: 10px;
+            margin-left: auto;
+        }
+
+        /* Responsive Footer for small screens */
+        @media (max-width: 768px) {
+            footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-right {
+                text-align: center;
+                align-items: center;
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+            </style>
 </head>
 <body>
     <main>
@@ -27,5 +87,21 @@
 
         <script defer type="text/javascript" src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js"></script>
     </main>
+        <!-- Footer -->
+        <footer>
+            <div>
+                <p>&copy; 2024, Jiko Fuku</p>
+                <a href="https://service.spreadshirt.com/hc/en-us/articles/115000984869-Exchanges-and-Returns" target="_blank">Refund Policy</a>
+                <a href="https://service.spreadshirt.com/hc/en-us/articles/115000978409-Privacy?platform=na&shop_id=1731330&shop_name=jiko-fuku" target="_blank">Privacy Policy</a>
+                <a href="https://service.spreadshirt.com/hc/en-us/articles/115000991325-Terms-Conditions?platform=na&shop_id=1731330&shop_name=jiko-fuku" target="_blank">Terms & Conditions</a>
+                <a href="https://service.spreadshirt.com/hc/en-us/articles/115000993925-Shipping-Times-and-Costs?platform=na&shop_id=1731330&shop_name=jiko-fuku" target="_blank">Shipping Policy</a>
+                <a href="https://service.spreadshirt.com/hc/en-us/?shop_name=jiko-fuku&shop_id=1731330&platform=na" target="_blank">Help</a>
+            </div>
+    
+            <div class="footer-right">
+                <p>Email: <span>service@spreadshirt.com</span></p>
+                <p>Phone: <span>+1 800 381 0815 (Mon - Fri: 8am - 7pm ET)</span></p>
+            </div>
+        </footer>
 </body>
 </html>
