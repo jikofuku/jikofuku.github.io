@@ -148,11 +148,49 @@ footer {
             usePushState: true,
             updateMetadata: false
         };
-        window.onload = function() {
-    const loader = document.getElementById('loader');
-    loader.style.display = 'none';  // Hide loader once the page is fully loaded
-};
+    
+        // Function to show the loader
+        const showLoader = () => {
+            const loader = document.getElementById('loader');
+            loader.style.display = 'flex'; // Ensure the loader is visible
+        };
+    
+        // Function to hide the loader
+        const hideLoader = () => {
+            const loader = document.getElementById('loader');
+            const footer = document.querySelector('footer');
+            loader.style.display = 'none';
+            footer.style.visibility = 'visible';
+            footer.style.opacity = '1';
+        };
+    
+        // Monitor the shop content loading completion
+        const monitorShopLoading = () => {
+            const shop = document.getElementById('myShop');
+    
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.type === 'childList' && shop.children.length > 0) {
+                        // Hide the loader after content is loaded
+                        setTimeout(() => {
+                            hideLoader();
+                            observer.disconnect();  // Stop observing after footer loads
+                        }, 150); // Adjust the time (in milliseconds) as needed
+                    }
+                });
+            });
+    
+            // Start observing the shop content
+            observer.observe(shop, { childList: true });
+        };
+    
+        // Show loader on page load and start monitoring
+        document.addEventListener('DOMContentLoaded', () => {
+            showLoader(); // Show the loader
+            monitorShopLoading(); // Start monitoring for shop content
+        });
     </script>
+    
     
     <script defer src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js"></script>
 </body>
