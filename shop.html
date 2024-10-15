@@ -7,12 +7,18 @@
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
 
     <style>
-                /* Main content to ensure footer doesn't load first */
-                main {
-            min-height: 100vh; /* Ensures main content takes full viewport height */
-            width: 100%;
+        /* General resets */
+        html, body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            height: 100%; /* Ensure the body takes up full height */
+            background-color: #000000; /* Ensures no white space is visible */
+            width: 100%; /* Ensures the body and html take up full width */
+            overflow-x: hidden; /* Prevents horizontal scrolling */
         }
-
+        
         /* Footer styling */
         footer {
             background-color: #000000;
