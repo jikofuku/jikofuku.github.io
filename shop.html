@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore The Chaos</title>
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="preload" href="images/Red.webp" as="loader">
 
     <style>
         /* General resets */
@@ -17,6 +18,34 @@
             background-color: #000000; /* Ensures no white space is visible */
             width: 100%; /* Ensures the body and html take up full width */
             overflow-x: hidden; /* Prevents horizontal scrolling */
+        }
+
+         /* Loader Style */
+         #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loader img {
+            width: 150px;
+            animation: bulge 1s infinite;
+        }
+
+        @keyframes bulge {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
         }
 
         /* Footer styling */
@@ -89,6 +118,10 @@
                 usePushState: true,
                 updateMetadata: false  // Ensure Spreadshirt doesn't override your metadata
             };
+            window.onload = function() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';  // Hide loader once the page is fully loaded
+};
         </script>
 
         <script defer type="text/javascript" src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js"></script>
