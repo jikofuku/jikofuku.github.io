@@ -160,18 +160,21 @@ document.addEventListener('DOMContentLoaded', () => {
         mutations.forEach((mutation) => {
             if (mutation.type === 'childList' && shop.children.length > 0) {
                 // Hide the loader and reveal footer once shop loads
+                 // Set a timeout to extend loader visibility
+                 setTimeout(() => {
                 loader.style.display = 'none';
                 footer.style.visibility = 'visible';
                 footer.style.opacity = '1';
                 observer.disconnect();  // Stop observing after footer loads
-            }
+            }, 150); // Adjust the time (in milliseconds) as needed
+                }
+            });
         });
+
+        // Start observing the shop content
+        observer.observe(shop, { childList: true });
     });
-
-    // Start observing the shop content
-    observer.observe(shop, { childList: true });
-});
-
+    
     </script>
 
     <script defer src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js"></script>
