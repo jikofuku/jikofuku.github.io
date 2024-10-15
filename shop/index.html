@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiko Fuku Shop</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <!-- Other CSS files can be linked here -->
+</head>
+<body>
+    <main>
+        <div id="myShop">
+            <!-- Shop Content Here -->
+        </div>
+
+        <!-- Spreadshop Client Script -->
+        <script type="text/javascript">
+            var spread_shop_config = {
+                shopName: 'jiko-fuku',
+                locale: 'us_US',
+                prefix: 'https://jiko-fuku.myspreadshop.com',
+                baseId: 'myShop',
+                usePushState: true,
+                updateMetadata: false  // Ensure Spreadshirt doesn't override your metadata
+            };
+        </script>
+
+        <script defer type="text/javascript" src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js"></script>
+    </main>
+</body>
+</html>
