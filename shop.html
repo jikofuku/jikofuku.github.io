@@ -104,8 +104,6 @@ footer {
     transition: opacity 0.5s ease-in-out;
 }
 
-
-
     </style>
 </head>
 <body>
@@ -151,6 +149,12 @@ footer {
         window.onload = function() {
     const loader = document.getElementById('loader');
     loader.style.display = 'none';  // Hide loader once the page is fully loaded
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';  // Hide loader once the page is fully loaded
+
+    const footer = document.querySelector('footer');
+    footer.style.visibility = 'visible';  // Make footer visible
+    footer.style.opacity = '1';  // Ensure full opacity
 };
     </script>
     
