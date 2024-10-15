@@ -148,22 +148,10 @@ footer {
             usePushState: true,
             updateMetadata: false
         };
-    
-// Show loader on page load
-document.addEventListener('DOMContentLoaded', () => {
+        window.onload = function() {
     const loader = document.getElementById('loader');
-    const footer = document.querySelector('footer');
-
-    loader.style.display = 'flex'; // Show the loader
-
-    // Hide the loader after a slight delay (adjust if necessary)
-    setTimeout(() => {
-        loader.style.display = 'none'; 
-        footer.style.visibility = 'visible';
-        footer.style.opacity = '1';
-    }, 1000); // 1 second delay (adjust as needed)
-});
-
+    loader.style.display = 'none';  // Hide loader once the page is fully loaded
+};
     </script>
     
     <script defer src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js"></script>
