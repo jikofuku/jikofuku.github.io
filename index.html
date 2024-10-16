@@ -147,32 +147,34 @@
 
     
 
-    <div class="container">
-        <div class="row content-wrapper justify-content-center">
-            <div class="col-lg-7 mbr-form">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <h5 class="mbr-section-title mbr-fonts-style mb-5 display-2"><strong>Get exclusive drops and dark deals before anyone else.</strong></h5>
-                </div>
+  <div class="container">
+    <div class="row content-wrapper justify-content-center">
+        <div class="col-lg-7 mbr-form">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <h5 class="mbr-section-title mbr-fonts-style mb-5 display-2"><strong>Get exclusive drops and dark deals before anyone else.</strong></h5>
+            </div>
 
-                <div class="text-wrapper align-left" data-form-type="formoid">
-                    <form action="https://forms.gle/1fcYgwbU435UXfVc7" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="hEZFjIbdu5MxTsQcoUdic9RrJTFYB/NlHR00wH1GcqOugBmOYC6aqOIsibgZk59MTtm6GJfg+Fb3AvmJcvWaMg0bK/+r10bEdXV6iyftGpqPKqaRhg+K660Wo/1xGeR9">
-                        <div class="row">
-                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
-                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                                Oops...! some problem!
-                            </div>
+            <div class="text-wrapper align-left" data-form-type="formoid">
+                <form id="emailForm" class="mbr-form form-with-styler" data-form-title="Form Name">
+                    <div class="row">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                            Oops...! some problem!
                         </div>
-                        <div class="dragArea row">
-                            <div data-for="email" class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                <input type="email" name="email" data-form-field="email" class="form-control display-7" value="" placeholder="Enter your email." id="email-call-to-action-12-ur4qWY4xkP">
-                            </div>
-                            <div class="col-auto mbr-section-btn"><button type="submit" class="w-100 btn btn-danger display-7">Subscribe Now</button></div>
+                    </div>
+                    <div class="dragArea row">
+                        <div data-for="email" class="col-lg-6 col-md-6 col-sm-12 form-group">
+                            <input type="email" name="email" data-form-field="email" class="form-control display-7" value="" placeholder="Enter your email." id="emailInput" required>
                         </div>
-                    </form>
-                </div>
+                        <div class="col-auto mbr-section-btn">
+                            <button type="submit" class="w-100 btn btn-danger display-7">Subscribe Now</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 </section>
 
 <section data-bs-version="5.1" class="article05 cid-ur4qWY2M7e" id="about-us-5-ur4qWY2M7e">
@@ -406,7 +408,43 @@
 		</div>
 	</div>
   <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>  <script src="assets/theme/js/script.js"></script>  
-    
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+      $(document).ready(function() {
+          $('#emailForm').submit(function(event) {
+              event.preventDefault(); // Prevent the form from submitting the default way
+              var email = $('#emailInput').val();
+  
+              if (email) {
+                  $.ajax({
+                      type: 'POST',
+                      url: 'https://<dc>.api.mailchimp.com/3.0/lists/<your_audience_id>/members', // Replace <dc> and <your_audience_id>
+                      headers: {
+                          'Authorization': '0ebec3ae0225572e9022f8b3cf628b19-us12', // Replace with your API key
+                          'Content-Type': 'application/json'
+                      },
+                      data: JSON.stringify({
+                          email_address: email,
+                          status: 'subscribed' // or 'pending' for double opt-in
+                      }),
+                      success: function() {
+                          // Show success message
+                          $('[data-form-alert]').hide();
+                          $('[data-form-alert]').first().show(); // Show success alert
+                          $('#emailInput').val(''); // Clear the input
+                      },
+                      error: function() {
+                          // Show error message
+                          $('[data-form-alert]').hide();
+                          $('[data-form-alert-danger]').show(); // Show error alert
+                      }
+                  });
+              } else {
+                  alert('Please enter a valid email address.');
+              }
+          });
+      });
+  </script>  
   
 </body>
 </html>
