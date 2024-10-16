@@ -1,10 +1,7 @@
-# robots.txt for https://www.jikofuku.com/
-
 User-agent: *
 Disallow: /private/         # Disallow the /private/ directory
 Disallow: /tmp/             # Disallow the /tmp/ directory
 Disallow: /test-page.html   # Disallow a specific page
 Allow: /public/             # Allow the /public/ directory
 
-# Specify the location of your sitemap
 Sitemap: https://www.jikofuku.com/sitemap.xml
