@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore The Chaos</title>
-    <link rel="preload" href="assets/images/Red.webp" as="loader">
+    <link rel="preload" href="../assets/images/Red.webp" as="image" type="image/webp">
     <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon_io/android-chrome-192x192.png">
@@ -62,7 +62,7 @@
     
     <!-- Loading Screen -->
     <div id="loader">
-        <img src="assets/images/Red.webp" alt="Loading..." />
+        <img src="../assets/images/Red.webp" alt="Loading..." />
     </div>
 
     <!-- Main Content -->
@@ -82,10 +82,17 @@
             usePushState: true,
             updateMetadata: false
         };
-        window.onload = function() {
-    const loader = document.getElementById('loader');
-    loader.style.display = 'none';  // Hide loader once the page is fully loaded
-};
+        window.addEventListener('load', () => {
+    const loaderImage = new Image();
+    loaderImage.src = 'assets/images/Red.webp'; // Ensure path is correct
+
+    loaderImage.onload = () => {
+        document.querySelector('#loader img').src = loaderImage.src; // Assign image once loaded
+        const loader = document.getElementById('loader');
+        loader.style.display = 'none'; // Hide loader after loading
+    };
+});
+
     </script>
 
     <script defer src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js"></script>
