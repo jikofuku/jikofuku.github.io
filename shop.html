@@ -82,17 +82,10 @@
             usePushState: true,
             updateMetadata: false
         };
-        window.addEventListener('load', () => {
-    const loaderImage = new Image();
-    loaderImage.src = 'assets/images/Red.webp'; // Ensure path is correct
-
-    loaderImage.onload = () => {
-        document.querySelector('#loader img').src = loaderImage.src; // Assign image once loaded
-        const loader = document.getElementById('loader');
-        loader.style.display = 'none'; // Hide loader after loading
-    };
-});
-
+        window.onload = function() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';  // Hide loader once the page is fully loaded
+};
     </script>
 
     <script defer src="https://jiko-fuku.myspreadshop.com/shopfiles/shopclient/shopclient.nocache.js"></script>
