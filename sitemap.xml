@@ -1,15 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://jikofuku.com/</loc>
-      <lastmod>2024-10-15</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>1.0</priority>
-   </url>
-   <url>
-      <loc>https://jikofuku.com/shop</loc>
-      <lastmod>2024-10-15</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.8</priority>
-   </url>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://jikofuku.com/</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/shop</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/shop/y%C5%ABgen+series?collection=CregAInLgr</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/shop/collections</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/shop/skull+art?collection=hvrNzyLHZN</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/shop/dark+aesthetics?collection=tMtiuBDpIL</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/shop/textual+artistry?collection=zpfUpiXORB</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/shop/about</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/shop/crimson+eclipse+raven?idea=66d9b113031199471e6f5919</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/crimson+eclipse+raven?idea=66d9b113031199471e6f5919</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/shop/oni-chan%3A+the+mask+of+mischief?idea=670ddcb29d21493a148c9cf3</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/shop/floral+necromance?idea=66d9b13b6852e61ff9174b19</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/floral+necromance?idea=66d9b13b6852e61ff9174b19</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/shop/heaven's+watch%3A+the+tengu's+vow?idea=670df8f49d21493a14d837b9</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/men?q=D1</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jikofuku.com/women?q=D2</loc>
+  <lastmod>2024-10-17T02:10:30+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
